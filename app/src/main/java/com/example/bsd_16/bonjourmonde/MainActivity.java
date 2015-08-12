@@ -5,20 +5,27 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tv1;
+    EditText edit_text;
+    TextView output;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tv1 = (TextView) findViewById(R.id.textView);
+        output = (TextView) findViewById(R.id.output);
+
     }
 
     public void button1(View v) {
-        tv1.setText("hello");
+        edit_text = (EditText) findViewById(R.id.editText);
+        CharSequence edit_text_val = edit_text.getText(); // Get value of edit_text
+        edit_text.setText(null); // Empty the input text field
+        String output_text = "Hello, " + edit_text_val.toString(); // Insert "Hello" in the front
+        output.setText(output_text); // Set the output text
     }
 
     @Override
