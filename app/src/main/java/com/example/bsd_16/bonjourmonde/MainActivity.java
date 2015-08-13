@@ -1,5 +1,11 @@
+// Create a package for providing access protection
 package com.example.bsd_16.bonjourmonde;
 
+/*
+ * In websites, JavaScripts manages their events.
+ * In Android apps, Java does the job.
+ * An activity is something focused.
+ */
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
